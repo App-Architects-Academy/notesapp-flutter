@@ -8,7 +8,7 @@ import 'package:notes/bloc/homepage/state/homepage_loading_state.dart';
 import 'package:notes/bloc/homepage/state/homepage_state.dart';
 import 'package:notes/db/models/note.dart';
 import 'package:notes/db/note_db.dart';
-import 'package:notes/widgets/recent_notes_item.dart';
+import 'package:notes/common/widgets/recent_notes_item.dart';
 import 'package:notes_app_cli/notes/index.dart';
 
 void main() {
@@ -95,17 +95,16 @@ class NotesLandingPage extends StatelessWidget {
                   'Reminders',
                   style: headerTextStyle,
                 ),
-                // const SizedBox(
-                //   height: 8,
-                // ),
-
                 SizedBox(
                   height: 100,
                   width: MediaQuery.of(context).size.width,
-                  child: Stack(
+                  child: const Stack(
                     children: [
-                      Positioned(child: Text('hello',style: TextStyle(color: Colors.black, fontSize: 16)),
-                      right: 100,
+                      Positioned(
+                        child: Text('hello',
+                            style:
+                                TextStyle(color: Colors.black, fontSize: 16)),
+                        right: 100,
                         top: -20,
                       )
                     ],
